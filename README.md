@@ -2,6 +2,8 @@
 
 You choose a dog breed. it returns you an image of that breed! 🐕
 
+Site is live ✨ - https://animal-breeds.vercel.app/
+
 ## Tech stack used
 
 - Nuxt 3
