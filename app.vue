@@ -10,8 +10,8 @@
 
    <div class="grid grid-cols-5">
     <div class="col-span-2 columns-4">
-      <div v-for="(breed, id) in breeds" :key="breed" >
-        <button class="py-1 px-3 border flex justify-center items-center rounded-lg hover:text-gray-400 transition-all" 
+      <div v-for="(breed, id) in breeds" :key="breed">
+        <button class="hover:animate-pulse py-1 px-3 my-2 border bg-teal-400 text-white hover:bg-teal-500 flex justify-center items-center rounded-lg transition-all" 
         @click="currentBreed = breed"
         >
           {{ breed }}
