@@ -11,6 +11,9 @@ importers:
       '@nuxtjs/tailwindcss':
         specifier: ^6.14.0
         version: 6.14.0(magicast@0.5.2)(yaml@2.8.2)
+      vue-debounce:
+        specifier: ^5.0.1
+        version: 5.0.1(vue@3.5.29)
     devDependencies:
       cypress:
         specifier: ^15.11.0
@@ -4009,6 +4012,11 @@ packages:
 
   vue-bundle-renderer@2.2.0:
     resolution: {integrity: sha512-sz/0WEdYH1KfaOm0XaBmRZOWgYTEvUDt6yPYaUzl4E52qzgWLlknaPPTTZmp6benaPTlQAI/hN1x3tAzZygycg==}
+
+  vue-debounce@5.0.1:
+    resolution: {integrity: sha512-tJWEDhjHQ47MAUnr7EtZvClNQZJUlKlzd6TVxkSCzWXjeCH/rcKbCDzrd6FNEhvxDOBsTfJFbb9P4f5Xc26Iag==}
+    peerDependencies:
+      vue: '>= 3.0.0'
 
   vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
@@ -8462,6 +8470,10 @@ snapshots:
   vue-bundle-renderer@2.2.0:
     dependencies:
       ufo: 1.6.3
+
+  vue-debounce@5.0.1(vue@3.5.29):
+    dependencies:
+      vue: 3.5.29
 
   vue-devtools-stub@0.1.0: {}
 
