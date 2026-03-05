@@ -1,3 +1,30 @@
+<script setup lang="ts">
+// from https://dog.ceo/dog-api/breeds-list
+
+const name = ref("dogs"); 
+const currentBreed = ref("");
+
+const {data: breedImage} = useFetch(
+  () => `https://dog.ceo/api/breed/${currentBreed.value}/images/random`,
+  {
+    transform: (res: { message: string }) => res.message
+  }
+);
+
+const {data: breeds} = useFetch(
+  "https://dog.ceo/api/breeds/list/all",
+  {
+    transform: (res: { message: Record<string, unknown> }) => Object.keys(res.message)
+  }
+);
+
+const randomColor = Math.floor(Math.random()*16777215).toString(16);
+console.log('randomcolor', randomColor)
+
+console.log("breedimage", breedImage)
+</script>
+
+
 <template>
   <div class=" flex flex-col gap-8 justify-center items-center w-full py-4 p-4" >
     <div class="relative bg-gray-200 p-10 md:p-20 w-full rounded-xl flex flex-col justify-center items-center gap-4">
@@ -35,35 +62,6 @@
    </div>
   </div>
 </template>
-
-<script setup>
-// from https://dog.ceo/dog-api/breeds-list
-
-const name = ref("dogs"); 
-const currentBreed = ref("");
-
-const {data: breedImage} = useFetch(
-  () => `https://dog.ceo/api/breed/${currentBreed.value}/images/random`,
-  {
-    transform: (res) => res.message
-  }
-);
-
-const {data: breeds} = useFetch(
-  "https://dog.ceo/api/breeds/list/all",
-  {
-    transform: (res) => Object.keys(res.message)
-  }
-);
-
-const randomColor = Math.floor(Math.random()*16777215).toString(16);
-console.log('randomcolor', randomColor)
-
-
-
-console.log("breedimage", breedImage)
-</script>
-
 <style>
 .v-enter-active,
 .v-leave-active {
