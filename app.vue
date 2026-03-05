@@ -3,8 +3,8 @@ import { debounce } from 'vue-debounce'
 // from https://dog.ceo/dog-api/breeds-list
 
 const name = ref("dogs");
-const currentBreed = ref("");
-const searchBreed = ref("");
+const currentBreed = ref("chow");
+const searchBreed = ref("chow");
 
 const { data: breedImage, status, error: breedImageError, refresh, pending: breedImagePending } = useFetch(
   () => `https://dog.ceo/api/breed/${currentBreed.value}/images/random`, {
@@ -57,7 +57,7 @@ console.log("breedimage", breedImage)
 
   <div class=" flex flex-col gap-8 justify-center items-center w-full">
     <div class="relative bg-amber-50 px-8 py-8 w-full rounded-xl flex flex-col justify-center items-center gap-6">
-      <h2 class="text-amber-900 text-lg md:text-4xl font-semibold">Find dog breed 🐶</h2>
+      <h2 class="text-amber-900 text-lg md:text-4xl font-semibold">Find a dog breed 🐶</h2>
       <input type="text" data-test="dog-input" v-model="searchBreed" class="border-[2px] border-amber-200 text-center rounded-lg p-2  text-amber-900" />
       <div class="absolute bottom-6 right-6 ">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-16 md:w-32" viewBox="0 0 48 48">
