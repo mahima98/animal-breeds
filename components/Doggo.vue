@@ -7,6 +7,6 @@ defineProps({
 </script>
 
 <template>
-  <img :src="image" class="max-w-[250px] md:max-w-[700px] max-h-[300px] md:max-h-[500px] object-contain transition-all rounded-xl border-teal-500 border-8 p-2"/>
+  <img :src="image" class="size-64 ring ring-yellow-400  object-cover transition-all rounded-lg"/>
 </template>
 
